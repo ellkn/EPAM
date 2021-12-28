@@ -8,8 +8,11 @@ namespace Task_1._1._1
         {
             Console.WriteLine("Rectangle - программа, позволяющая высчитывать значение площади прямоугольника");
             double a, b; // переменные для ввода значений. а - длина, b - ширина
-            //знаю, в задании написано игнорировать ввод нецелых чисел, но пусть такая возможность тоже будет
-            bool cyrcle=true;
+                         //знаю, в задании написано игнорировать ввод нецелых чисел, но пусть такая возможность тоже будет
+
+            // ВАРИАНТ 1. 
+
+            /*bool cyrcle=true;
             while (cyrcle)
             {
                 Console.WriteLine("Введите значение длины а: ");
@@ -35,7 +38,35 @@ namespace Task_1._1._1
                     if (b < 0 || b == 0)
                         Console.WriteLine("Ошибка в b");
                 }
+            }*/
+
+            // ВАРИАНТ 2. 
+            
+            Console.WriteLine("Введите значение длины а: ");
+            a = GetConsoleDoubleValue();
+            Console.WriteLine(a);
+            Console.WriteLine("Введите значение ширины b: ");
+            b = GetConsoleDoubleValue();
+            Console.WriteLine("Площадь прямоугольника = " + Rectangle(a, b));
+        }
+        public static double GetConsoleDoubleValue()
+        {
+            Boolean isNegative = true;
+            while(isNegative)
+            {
+                string value = Console.ReadLine();
+                double result = 0;
+                if (!double.TryParse(value, out result) || result < 0)
+                {
+                    Console.WriteLine("Ошибка ввода! Введите положительное значение");
+                }
+                else
+                {
+                    isNegative = false;
+                    return result;
+                }
             }
+            return 0;
         }
         static double Rectangle(double a, double b) => a * b; 
     }
