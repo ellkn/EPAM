@@ -44,7 +44,6 @@ namespace Task_1._1._1
             
             Console.WriteLine("Введите значение длины а: ");
             a = GetConsoleDoubleValue();
-            Console.WriteLine(a);
             Console.WriteLine("Введите значение ширины b: ");
             b = GetConsoleDoubleValue();
             Console.WriteLine("Площадь прямоугольника = " + Rectangle(a, b));
