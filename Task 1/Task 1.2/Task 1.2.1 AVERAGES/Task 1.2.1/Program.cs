@@ -18,7 +18,6 @@ namespace Task_1._2._1
             string[] array = text.Trim(' ').Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i]);
                 wordCount++;
                 letters +=array[i].Length;
             }
