@@ -1,0 +1,30 @@
+.registration_form{
+    font-family: Arial;
+	width: 400px; 
+    height: 270px; 
+    border: 2px solid #0075b2;
+	background-color: #0690CF;
+	color: white;
+}
+header {
+	margin: 0px 0px 0px 10px;
+}
+h3{
+	font-weight: normal; /*not bold*/
+}
+.e-mail{
+    padding: 20px 22px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.password{
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    flex-direction: row; 
+}
+button {
+	height: 30px;
+    margin:  30px 0px 0px 20px;
+	background-color: #FFDF7F;
+	border: none;
+}
